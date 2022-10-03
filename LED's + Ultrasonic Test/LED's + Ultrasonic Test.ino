@@ -1,7 +1,7 @@
 //Initializing LED Pin
-int redPin = 11;
-int greenPin = 10;
-int bluePin = 9;
+int redPin = 10;
+int greenPin = 9;
+int bluePin = 11;
 // defines pins numbers
 const int trigPin = 6;
 const int echoPin = 5;
@@ -33,8 +33,9 @@ void loop() {
   Serial.print("Distance: ");
   Serial.println(distance);
   setColor(0, 0, 0);
-  if (distance < 20){
-    setColor(80, 80, 0);  // purple
+  if (distance < 100){
+    setColor(255, 0, 255);  // purple
+    delay(2000);
   }
 }
 
